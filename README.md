@@ -162,10 +162,28 @@ smart contract (in our case, get and set)
 Use the 'get' method to get your name from the blockchain. When you
 `call` a function, you do not have to send a transaction. 
 
+![Get submit
+screen](https://raw.githubusercontent.com/onggunhao/qtum-intro/master/img/abi-get-call-screen.png)
 ![Get name](https://raw.githubusercontent.com/onggunhao/qtum-intro/master/img/qtum-abi-get.png)
 
 ##### Send data to the blockchain
 
-We are going to use the `set` function to send a transaction to the blockchain. 
+We are going to use the `set` function to change the name, by sending a new
+transaction to the blockchain. 
 
-Approve it at http://localhost:9899, because this costs QTUM. 
+![Submit new
+name](https://raw.githubusercontent.com/onggunhao/qtum-intro/master/img/abi-set-submit.png)
+
+After clicking send, you'll see that the transaction is waiting for
+authorization. This is because it costs QTUM.
+
+![Awaiting authorization](https://raw.githubusercontent.com/onggunhao/qtum-intro/master/img/abi-set-await-authorization.png)
+
+##### Approving a transaction
+
+To approve a transaction, go to the transaction authorization UI at
+http://localhost:9899.
+
+![Portal Authorizations](https://raw.githubusercontent.com/onggunhao/qtum-intro/master/img/portal-authorizations.png) 
+
+
