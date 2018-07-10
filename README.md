@@ -186,4 +186,13 @@ http://localhost:9899.
 
 ![Portal Authorizations](https://raw.githubusercontent.com/onggunhao/qtum-intro/master/img/portal-authorizations.png) 
 
+It'll take some time for the blockchain transaction to be approved, but you
+will eventually see the success screen with the details of the transaction.
 
+![Success set
+screen](https://raw.githubusercontent.com/onggunhao/qtum-intro/master/img/qtum-abi-set.png)
+
+### Further learning
+
+To learn more, please visit https://book.qtum.org/en/ for the full tutorial.
+Happy learning!
