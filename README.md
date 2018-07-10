@@ -130,10 +130,14 @@ export QTUM_SENDER=qdiqg2mp646KhSQjVud3whv6C34hNHQnL2
 ```
 solar deploy MyName.sol '["Adam"]'
 ```
+![Solar
+Deploy](https://raw.githubusercontent.com/onggunhao/qtum-intro/master/img/solar-deploy.png)
 
 ```
 solar status
 ```
+![Solar
+status](https://raw.githubusercontent.com/onggunhao/qtum-intro/master/img/solar-status.png)
 
 You can see more about the deployed contracts in ```solar.development.json```
 
