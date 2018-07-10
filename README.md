@@ -72,24 +72,24 @@ We will be writing the most simple smart contract, that saves a single value to
 the QTUM blockchain.
 
 In the terminal window with docker running, create the following file (using
-vi, nano etc) and save it as SimpleStore.sol
+vi, nano etc) and save it as MyName.sol
 
 ```
 pragma solidity ^0.4.18;
-contract SimpleStore {
-  function SimpleStore(uint _value) public {
-    value = _value;
+contract MyName {
+  function MyName(string _name) public {
+    myName = _name;
   }
 
-    function set(uint newValue) public {
-        value = newValue;
+    function set(string newName) public {
+        myName = newName;
     }
 
-    function get() public constant returns (uint) {
-        return value;
+    function get() public constant returns (string) {
+        return myName;
     }
 
-    uint value;
+    string myName;
 }
 ```
 
@@ -128,7 +128,7 @@ export QTUM_SENDER=qdiqg2mp646KhSQjVud3whv6C34hNHQnL2
 ### 4. Deploying smart contract to QTUM (qcli, solar)
 
 ```
-solar deploy SimpleStore.sol
+solar deploy MyName.sol '["Adam"]'
 ```
 
 ```
