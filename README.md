@@ -66,26 +66,6 @@ explanation)
 > qcli getnetworkinfo
 ```
 
-##### Create an address
-```
-> qcli getnewaddress
-```
-
-##### Send a transaction!
-```
-> qcli sendtoaddress <address> <amount>
-<returns transaction id>
-
-e.g. 
-> qcli sendtoaddress qdiqg2mp646KhSQjVud3whv6C34hNHQnL2 10
-11e790d26d6996803960ef1586cbaeb54af20fd3e1f41508843c36f2ef60bb9d
-```
-
-##### Get transaction information
-```
-> qcli gettransaction 11e790d26d6996803960ef1586cbaeb54af20fd3e1f41508843c36f2ef60bb9d
-```
-
 ### 3. Writing a simple smart contract in solidity
 
 We will be writing the most simple smart contract, that saves a single value to
@@ -113,6 +93,38 @@ contract SimpleStore {
 }
 ```
 
+### 4. Creating an address to deploy smart contract from
+
+##### Create an address
+```
+> qcli getnewaddress
+```
+
+##### Send a transaction!
+```
+> qcli sendtoaddress <address> <amount>
+<returns transaction id>
+
+e.g. 
+> qcli sendtoaddress qdiqg2mp646KhSQjVud3whv6C34hNHQnL2 10
+11e790d26d6996803960ef1586cbaeb54af20fd3e1f41508843c36f2ef60bb9d
+```
+
+##### Get transaction information
+```
+> qcli gettransaction 11e790d26d6996803960ef1586cbaeb54af20fd3e1f41508843c36f2ef60bb9d
+```
+
+##### Get balance of the address
+```
+qcli listunspent 1 99999 '["qdiqg2mp646KhSQjVud3whv6C34hNHQnL2"]'
+```
+
+##### Configure Solar (deployment tool) to use address as sender
+```
+export QTUM_SENDER=qdiqg2mp646KhSQjVud3whv6C34hNHQnL2
+```
+
 ### 4. Deploying smart contract to QTUM (qcli, solar)
 
 ```
@@ -132,4 +144,6 @@ Open up a window in http://localhost:9899/abiplay
 Load the `solar.development.json` file into the `abiplay` and you can see the
 list of available methods.
 
+Set the new variable in SimpleStore
 
+Approve it at http://localhost:9899, because this costs QTUM. 
