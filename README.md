@@ -27,7 +27,7 @@ In the first tab, we will run QTUM in regtest mode (basically a local QTUM
 blockchain that you can play around with)
 
 ```
-docker run -it --rm \
+> docker run -it --rm \
   --name myapp \
   -v `pwd`:/dapp \
   -p 9899:9899 \
@@ -39,7 +39,7 @@ In a second tab, we will enter the QTUM docker shell. Please type all
 additional instructions into this shell.
 
 ```
-docker exec -it myapp sh
+> docker exec -it myapp sh
 ```
 
 ### 4. Play around with QTUM!
@@ -51,17 +51,19 @@ explanation)
 
 ##### Generate some QTUM tokens for yourself:
 ```
-qcli generate 600
+> qcli generate 600
 ```
 
 ##### Check your balance
 ```
-qcli getbalance
+> qcli getbalance
 ```
 
 ##### Check number of blocks you have
 ```
-qcli getinfo
+> qcli getblockchaininfo
+> qcli getwalletinfo
+> qcli getnetworkinfo
 ```
 
 ### 3. Writing a simple smart contract in solidity
