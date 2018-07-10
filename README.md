@@ -66,6 +66,28 @@ explanation)
 > qcli getnetworkinfo
 ```
 
+##### Create an address
+```
+> qcli getnewaddress
+```
+
+##### Send a transaction!
+```
+> qcli sendtoaddress <address> <amount>
+<returns transaction id>
+
+e.g. 
+> qcli sendtoaddress qdiqg2mp646KhSQjVud3whv6C34hNHQnL2 10
+
+11e790d26d6996803960ef1586cbaeb54af20fd3e1f41508843c36f2ef60bb9d
+```
+
+##### Get transaction information
+```
+> qcli gettransaction
+11e790d26d6996803960ef1586cbaeb54af20fd3e1f41508843c36f2ef60bb9d
+```
+
 ### 3. Writing a simple smart contract in solidity
 ### 4. Deploying smart contract to QTUM (qcli, solar)
 ### 5. Using QTUM ABI explorer to interact with QTUM smart contract
