@@ -5,6 +5,8 @@ write your name to a smart contract on the QTUM blockchain.
 
 ## Part 1: Overview of Blockchains and QTUM
 
+Slides can be found here
+https://github.com/onggunhao/qtum-intro/raw/master/new_qtum_prezi_v2.1.1.pdf
 
 ## Part 2: Hands on Practice
 
