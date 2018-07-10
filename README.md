@@ -35,7 +35,8 @@ docker run -it --rm \
   hayeah/qtumportal
 ```
 
-In a second tab:
+In a second tab, we will enter the QTUM docker shell. Please type all
+additional instructions into this shell.
 
 ```
 docker exec -it myapp sh
@@ -48,10 +49,19 @@ rewards take 500 blocks to receive the full amount (see
 https://book.qtum.org/en/part1/qtum-docker.html#new-blocks-on-demand for full
 explanation)
 
-In the testnet, 
-
+##### Generate some QTUM tokens for yourself:
 ```
 qcli generate 600
+```
+
+##### Check your balance
+```
+qcli getbalance
+```
+
+##### Check number of blocks you have
+```
+qcli getinfo
 ```
 
 ### 3. Writing a simple smart contract in solidity
