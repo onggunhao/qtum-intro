@@ -17,11 +17,14 @@ https://docs.docker.com/v17.09/engine/installation/linux/docker-ce/ubuntu/
 
 ### 2. Pulling the QTUM Docker image
 
-`[sudo] docker pull hayeah/qtumportal:latest`
+```
+[sudo] docker pull hayeah/qtumportal:latest
+```
 
 ### 3. Starting the QTUM docker image
 
-In the first tab: 
+In the first tab, we will run QTUM in regtest mode (basically a local QTUM
+blockchain that you can play around with)
 
 ```
 docker run -it --rm \
@@ -33,7 +36,23 @@ docker run -it --rm \
 ```
 
 In a second tab:
-`docker exec -it myapp sh`
+
+```
+docker exec -it myapp sh
+```
+
+### 4. Play around with QTUM!
+
+This generates 600 blocks of QTUM. We need 600 blocks because QTUM block
+rewards take 500 blocks to receive the full amount (see
+https://book.qtum.org/en/part1/qtum-docker.html#new-blocks-on-demand for full
+explanation)
+
+In the testnet, 
+
+```
+qcli generate 600
+```
 
 ### 3. Writing a simple smart contract in solidity
 ### 4. Deploying smart contract to QTUM (qcli, solar)
