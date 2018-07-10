@@ -16,6 +16,25 @@ the instructions at the following link:
 https://docs.docker.com/v17.09/engine/installation/linux/docker-ce/ubuntu/
 
 ### 2. Pulling the QTUM Docker image
+
+`[sudo] docker pull hayeah/qtumportal:latest`
+
+### 3. Starting the QTUM docker image
+
+In the first tab: 
+
+```
+docker run -it --rm \
+  --name myapp \
+  -v `pwd`:/dapp \
+  -p 9899:9899 \
+  -p 9888:9888 \
+  hayeah/qtumportal
+```
+
+In a second tab:
+`docker exec -it myapp sh`
+
 ### 3. Writing a simple smart contract in solidity
 ### 4. Deploying smart contract to QTUM (qcli, solar)
 ### 5. Using QTUM ABI explorer to interact with QTUM smart contract
