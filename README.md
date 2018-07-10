@@ -145,6 +145,7 @@ You can see more about the deployed contracts in ```solar.development.json```
 
 Open up a window in http://localhost:9899/abiplay
 
+
 Load the `solar.development.json` file into the `abiplay` and you can see the
 list of available methods.
 
