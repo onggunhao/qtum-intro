@@ -87,7 +87,49 @@ e.g.
 ```
 
 ### 3. Writing a simple smart contract in solidity
+
+We will be writing the most simple smart contract, that saves a single value to
+the QTUM blockchain.
+
+In the terminal window with docker running, create the following file (using
+vi, nano etc) and save it as SimpleStore.sol
+
+```
+pragma solidity ^0.4.18;
+contract SimpleStore {
+  function SimpleStore(uint _value) public {
+    value = _value;
+  }
+
+    function set(uint newValue) public {
+        value = newValue;
+    }
+
+    function get() public constant returns (uint) {
+        return value;
+    }
+
+    uint value;
+}
+```
+
 ### 4. Deploying smart contract to QTUM (qcli, solar)
+
+```
+solar deploy SimpleStore.sol
+```
+
+```
+solar status
+```
+
+You can see more about the deployed contracts in ```solar.development.json```
+
 ### 5. Using QTUM ABI explorer to interact with QTUM smart contract
+
+Open up a window in http://localhost:9899/abiplay
+
+Load the `solar.development.json` file into the `abiplay` and you can see the
+list of available methods.
 
 
