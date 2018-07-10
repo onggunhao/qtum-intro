@@ -143,12 +143,29 @@ You can see more about the deployed contracts in ```solar.development.json```
 
 ### 5. Using QTUM ABI explorer to interact with QTUM smart contract
 
-Open up a window in http://localhost:9899/abiplay
+##### GUI for interacting with smart contracts
 
+QTUM has a GUI for interacting with smart contracts. You can find this at http://localhost:9899/abiplay
 
-Load the `solar.development.json` file into the `abiplay` and you can see the
-list of available methods.
+![QTUM ABI Play](https://raw.githubusercontent.com/onggunhao/qtum-intro/master/img/qtum-abi-player.png)
 
-Set the new variable in SimpleStore
+##### Load solar.deployment.json
+
+For the contracts that have been deployed, a solar.deployment.json file is
+created. This allows the ABI Play to interact with the public methods of the
+smart contract (in our case, get and set)
+
+![Load solar.deployment.json](https://github.com/onggunhao/qtum-intro/blob/master/img/qtum-abi-select-file.png) 
+
+##### Get data (i.e. name) from the blockchain
+
+Use the 'get' method to get your name from the blockchain. When you
+`call` a function, you do not have to send a transaction. 
+
+![Get name](https://raw.githubusercontent.com/onggunhao/qtum-intro/master/img/qtum-abi-get.png)
+
+##### Send data to the blockchain
+
+We are going to use the `set` function to send a transaction to the blockchain. 
 
 Approve it at http://localhost:9899, because this costs QTUM. 
